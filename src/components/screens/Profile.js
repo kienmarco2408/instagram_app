@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
-export const Profile = () => {
+const Profile = () => {
   return (
-    <View>
-      <Text>Profile Screen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text>Profile Screen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
+
+export default Profile;

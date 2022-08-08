@@ -1,10 +1,14 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, SafeAreaView } from 'react-native';
 
-export const Activity = () => {
+const Activity = () => {
   return (
-    <View>
-      <Text>Activity Screen</Text>
-    </View>
+    <SafeAreaView>
+      <View>
+        <Text>Activity Screen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
+
+export default Activity;
