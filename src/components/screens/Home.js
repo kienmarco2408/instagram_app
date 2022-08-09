@@ -7,6 +7,7 @@ import { useFonts } from '@expo-google-fonts/lobster';
 import AppLoading from 'expo-app-loading';
 
 import Stories from '../screenComponents/Stories';
+import Post from '../screenComponents/Post';
 
 const Home = () => {
   let [fontsLoaded, error] = useFonts({
@@ -42,6 +43,7 @@ const Home = () => {
       </View>
       <ScrollView>
         <Stories />
+        <Post />
       </ScrollView>
     </SafeAreaView>
   );
