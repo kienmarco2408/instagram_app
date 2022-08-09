@@ -107,7 +107,7 @@ const Post = () => {
               >
                 If enjoy the video ! Please like and subcribe
               </Text>
-              <Text style={{ opacity: 0.4, paddingVertical: 2 }}>
+              <Text style={{ opacity: 0.5, paddingVertical: 2 }}>
                 View all comments
               </Text>
               <View>
