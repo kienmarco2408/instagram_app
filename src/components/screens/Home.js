@@ -5,6 +5,7 @@ import Feather from 'react-native-vector-icons/Feather';
 import { Lobster_400Regular } from '@expo-google-fonts/lobster';
 import { useFonts } from '@expo-google-fonts/lobster';
 import AppLoading from 'expo-app-loading';
+import Ionic from 'react-native-vector-icons/Ionicons';
 
 import Stories from '../screenComponents/Stories';
 import Post from '../screenComponents/Post';
@@ -44,6 +45,18 @@ const Home = () => {
       <ScrollView>
         <Stories />
         <Post />
+        <View
+          style={{
+            justifyContent: 'center',
+            alignItems: 'center',
+            padding: 20,
+          }}
+        >
+          <Ionic
+            name="ios-reload-circle-sharp"
+            style={{ fontSize: 60, opacity: 0.2 }}
+          />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );

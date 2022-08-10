@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Feather from 'react-native-vector-icons/Feather';
 import Ionic from 'react-native-vector-icons/Ionicons';
+import Entypo from 'react-native-vector-icons/Entypo';
 
 const Post = () => {
   const postInfo = [
@@ -10,6 +11,27 @@ const Post = () => {
       postTitle: 'Ferb',
       postPersonImage: require('../../storage/images/userProfile_1.jpg'),
       postImage: require('../../storage/images/post_1.jpg'),
+      likes: 654,
+      isLike: false,
+    },
+    {
+      postTitle: 'Marco',
+      postPersonImage: require('../../storage/images/userProfile_2.jpg'),
+      postImage: require('../../storage/images/post_2.jpg'),
+      likes: 654,
+      isLike: false,
+    },
+    {
+      postTitle: 'Star',
+      postPersonImage: require('../../storage/images/userProfile_3.jpg'),
+      postImage: require('../../storage/images/post_3.jpg'),
+      likes: 654,
+      isLike: false,
+    },
+    {
+      postTitle: 'Perry',
+      postPersonImage: require('../../storage/images/userProfile_4.jpg'),
+      postImage: require('../../storage/images/post_4.jpg'),
       likes: 654,
       isLike: false,
     },
@@ -110,7 +132,12 @@ const Post = () => {
               <Text style={{ opacity: 0.5, paddingVertical: 2 }}>
                 View all comments
               </Text>
-              <View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                }}
+              >
                 <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                   <Image
                     source={data.postPersonImage}
@@ -125,6 +152,24 @@ const Post = () => {
                   <TextInput
                     placeholder="Add a comment"
                     style={{ opacity: 0.5 }}
+                  />
+                </View>
+                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                  <Entypo
+                    name="emoji-happy"
+                    style={{
+                      fontSize: 15,
+                      color: 'lightgreen',
+                      marginRight: 10,
+                    }}
+                  />
+                  <Entypo
+                    name="emoji-neutral"
+                    style={{ fontSize: 15, color: 'pink', marginRight: 10 }}
+                  />
+                  <Entypo
+                    name="emoji-happy"
+                    style={{ fontSize: 15, color: 'red', marginRight: 10 }}
                   />
                 </View>
               </View>
