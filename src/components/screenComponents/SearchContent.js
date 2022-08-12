@@ -1,7 +1,7 @@
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import React from 'react';
 
-const SearchContent = () => {
+const SearchContent = (props) => {
   const searchData = [
     {
       id: 0,
@@ -44,12 +44,16 @@ const SearchContent = () => {
                 style={{
                   flexDirection: 'row',
                   flexWrap: 'wrap',
-                  justifyContent: 'space-between',
+                  justifyContent: 'space-evenly',
                 }}
               >
                 {data.images.map((imageData, imgIndex) => {
                   return (
-                    <TouchableOpacity style={{ paddingBottom: 2 }}>
+                    <TouchableOpacity
+                      onPressIn={() => props.data(imageData)}
+                      onPressOut={() => props.data(null)}
+                      style={{ paddingBottom: 2 }}
+                    >
                       <Image
                         source={imageData}
                         style={{ width: 129, height: 150 }}
@@ -63,21 +67,24 @@ const SearchContent = () => {
               <View
                 style={{
                   flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  justifyContent: 'space-evenly',
                 }}
               >
                 <View
                   style={{
                     flexDirection: 'row',
                     flexWrap: 'wrap',
-
                     width: 261,
                     justifyContent: 'space-between',
                   }}
                 >
                   {data.images.slice(0, 4).map((imageData, imgIndex) => {
                     return (
-                      <TouchableOpacity style={{ paddingBottom: 2 }}>
+                      <TouchableOpacity
+                        onPressIn={() => props.data(imageData)}
+                        onPressOut={() => props.data(null)}
+                        style={{ paddingBottom: 2 }}
+                      >
                         <Image
                           source={imageData}
                           style={{ width: 129, height: 150 }}
@@ -86,7 +93,11 @@ const SearchContent = () => {
                     );
                   })}
                 </View>
-                <TouchableOpacity style={{ marginLeft: 2 }}>
+                <TouchableOpacity
+                  onPressIn={() => props.data(data.images[5])}
+                  onPressOut={() => props.data(null)}
+                  style={{ marginLeft: 2 }}
+                >
                   <Image
                     source={data.images[5]}
                     style={{ width: 129, height: 300 }}
@@ -98,10 +109,14 @@ const SearchContent = () => {
               <View
                 style={{
                   flexDirection: 'row',
-                  justifyContent: 'space-between',
+                  justifyContent: 'space-evenly',
                 }}
               >
-                <TouchableOpacity style={{ paddingRight: 2 }}>
+                <TouchableOpacity
+                  onPressIn={() => props.data(data.images[2])}
+                  onPressOut={() => props.data(null)}
+                  style={{ paddingRight: 2 }}
+                >
                   <Image
                     source={data.images[2]}
                     style={{ width: 260, height: 300 }}
@@ -117,7 +132,11 @@ const SearchContent = () => {
                 >
                   {data.images.slice(0, 2).map((imageData, imgIndex) => {
                     return (
-                      <TouchableOpacity style={{ paddingBottom: 2 }}>
+                      <TouchableOpacity
+                        onPressIn={() => props.data(imageData)}
+                        onPressOut={() => props.data(null)}
+                        style={{ paddingBottom: 2 }}
+                      >
                         <Image
                           source={imageData}
                           style={{ width: 129, height: 150 }}

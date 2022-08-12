@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <SafeAreaView>
-      <StatusBar />
+      <StatusBar barStyle="dark-content" />
       <View
         style={{
           justifyContent: 'space-between',
